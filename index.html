@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Webpack App</title>
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-        <h2>Tip: Check your console</h2>
-    </body>
-    
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/src/style.css" media="screen" />
+
+    <link rel="preload" href="./src/assets/fonts/Roboto-Regular.ttf" as="font" crossorigin>
+    <link rel="preload" href="./src/assets/fonts/Roboto-Medium.ttf" as="font" crossorigin>
+    <link rel="preload" href="./src/assets/fonts/Roboto-Bold.ttf" as="font" crossorigin>
+    <link rel="preload" href="./src/assets/fonts/Bellefair-Regular.ttf" as="font" crossorigin>
+
+    <!-- <link rel="preload" href="/dist/main.css" as="style">
+    <link rel="preload" href="/dist/main.js" as="script"> -->
+    <link rel="preload" href="./src/style.css" as="style">
+    <link rel="preload" href="./src/index.js" as="script">
+
+    <title>Ativadora da Luz</title>
+
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="container">
+                <img src="./src/assets/images/logo.svg" width="100px" alt="">
+                <ul>
+                    <li><a href="">QUEM SOU</a></li>
+                    <li><a href="">TERAPIAS</a></li>
+                    <li><a href="">CURSOS</a></li>
+                </ul>
+            </div>
+        </header>
+        <h1>Hello word!</h1>
+    </div>
+</body> 
 </html>
