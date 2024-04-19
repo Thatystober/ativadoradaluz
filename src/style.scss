@@ -42,34 +42,45 @@ table {
 	border-spacing: 0;
 }
 
+
 @font-face {
 	font-family: "Roboto",sans-serif;
-	src: url("/assets/fonts/Roboto-Bold.ttf") format("truetype");
+	src: local("Roboto"), url("assets/fonts/Roboto-Bold.ttf") format("truetype");
 	font-weight: bold;
+	font-style: bold;
+    font-display: swap;
 }
 
 @font-face {
 	font-family: "Roboto",sans-serif;
-	src: url("/assets/fonts/Roboto-Medium.ttf") format("truetype");
+	src: local("Roboto"), url("assets/fonts/Roboto-Medium.ttf") format("truetype");
 	font-weight: 600;
+	font-style: 600;
+    font-display: swap;
 }
 
 @font-face {
 	font-family: "Roboto",sans-serif;
-	src: url("/assets/fonts/Roboto-Regular.ttf") format("truetype");
+	src: local("Roboto"), url("assets/fonts/Roboto-Regular.ttf") format("truetype");
 	font-weight: normal;
+	font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
 	font-family: "Bellefair",sans-serif;
-	src: url("/assets/fonts/Bellefair-Regular.ttf") format("truetype");
+	src: local("Bellefair"), url("assets/fonts/Bellefair-Regular.ttf") format("truetype");
 	font-weight: normal;
+	font-style: normal;
+    font-display: swap;
 }
 
-// body{
-// 	font-family: "Bellefair", sans-serif;
-// }
+body,
+html{
+	font-family: "Bellefair";
+}
 
 h1{
-	font-family: "Bellefair", sans-serif;
+	font-family: "Bellefair";
+	color: red;
 }
