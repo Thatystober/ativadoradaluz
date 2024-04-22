@@ -1,0 +1,37 @@
+
+@font-face {
+	font-family: "Roboto";
+	src: local("Roboto") ,url("../fonts/Roboto-Bold.ttf");
+	font-weight: bold;
+	font-style: bold;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: local("Roboto"), url("../fonts/Roboto-Medium.ttf");
+	font-weight: 600;
+	font-style: 600;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: local("Roboto"), url("../fonts/Roboto-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: "Bellefair";
+	src: local("Bellefair"), url("../fonts/Bellefair-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+    font-display: swap;
+}
+
+body,
+html{
+	font-family: "Roboto"
+}
