@@ -22,7 +22,7 @@
   <body>
     <div id="wrapper">
       <header>
-        <div class="container">
+        <div class="container navbar">
           <img src="./assets/images/logo.svg" width="100px" alt="">
           <ul>
             <li><a href="">QUEM SOU</a></li>
@@ -31,8 +31,24 @@
           </ul>
         </div>
       </header>
-      
-      <h1>Hello word!</h1>
+
+      <div id="home">
+        <section class="banner">
+          <!-- <div> -->
+            <picture>
+              <source srcset="./assets/images/banner-mobile.jpg" media="(max-width: 768px)" sizes="768px" type="image/jpg">
+              <source srcset="./assets/images/banner.jpg" type="image/jpg" media="(min-width: 768px)" width="1443" height="410" >
+
+              <img src="./assets/images/banner.jpg" width="1443" height="410" role="presentation" alt="">
+            </picture>
+            <div class="container">
+              <div class="title">
+                <h1>Ativo tua Luz para fluir na Vida</h1>
+              </div>
+            </div>
+          <!-- </div> -->
+        </section>
+      </div>  
     </div>
   </body> 
 </html>
