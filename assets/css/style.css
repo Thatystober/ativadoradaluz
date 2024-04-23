@@ -2,6 +2,12 @@
   --text: #414141;
   --white: #ffffff;
   --blue: #93C5FD;
+
+  --box-shadow: 0px 4px 10px 0px #f2f2f2;
+}
+
+p{
+  line-height: 150%;
 }
 
 .container {
@@ -16,63 +22,13 @@
 	width: 100%;	
 }
 
-@media screen and (max-width: 520px) {
-	.container{
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
-}
-
-@media screen and (min-width: 320px) {
-  .container{
-    max-width: 401px;
-  }
-
-  section.banner h1{
-    font-size: 1rem;
-  }
-}
-
-@media screen and (min-width: 421px) {
-  .container{
-    max-width: 375px;
-  }
-
-  section.banner h1{
-    font-size: 2rem;
-  }
-}
-
-@media screen and (min-width: 520px) {
-  .container{
-    max-width: 500px;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .container{
-    max-width: 748px;
-  }
-}
-
-
-@media screen and (min-width: 850px) {
-  .container{
-    max-width: 972px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .container{
-    max-width: 1200px;
-  }
-  }
-
 #wrapper {
-	height: 100%;
+  height: 100%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+  
+  color: var(--text);
 }
 
 header{
@@ -82,26 +38,28 @@ header{
 }
 
 header .navbar{
-	display: flex;
+  display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+  flex-wrap: wrap;
 }
 
 header .navbar ul{
-	display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 
 header .navbar ul li a{
-	text-decoration: none;
+  text-decoration: none;
 	color: var(--text);
 	font-weight: 600;
 }
 
 header .navbar ul li a:hover{
-	transition: .5s;
+  transition: .5s;
 	color: var(--blue);
 }
 
@@ -109,10 +67,14 @@ picture {
   line-height: 0;
 }
 
+#home{
+  position: relative;
+}
+
 section.banner{
-	line-height: 0;
-  height: 100%;
-  max-height: 600px;
+  line-height: 0;
+  height: 600px;
+  /* max-height: 600px; */
   position: relative;
 }
 
@@ -135,7 +97,7 @@ section.banner h1{
   color: var(--white);
   line-height: 120%;
   font-size: 3rem;
-
+  
 }
 
 section.banner .title{
@@ -146,4 +108,182 @@ section.banner .title{
 
 section.banner .container{
   width: auto;
+}
+
+section.intro-therapies{
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 30rem;
+  z-index: 9;
+  left: 0;
+  right: 0;
+}
+
+section.intro-therapies hr{
+  height: 100px;
+  border-color: var(--blue);
+}
+
+section.intro-therapies .container > div{
+  display: flex;
+  gap: 1rem;
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 5px;
+  
+  box-shadow: var(--box-shadow);
+  max-width: 992px;
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 9;
+}
+
+section.intro-therapies .intro {
+  width: calc(100% / 3);
+}
+
+section.intro-therapies .intro .title{
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.618rem;
+}
+
+section.intro-therapies .intro p{
+  text-align: center;
+}
+
+section.about-me{
+  height: 900px;
+  position: relative;
+}
+
+section.about-me img.background-about{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  position: absolute;
+  z-index: -1;
+}
+
+section.about-me .container > div{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 15%;
+}
+
+section.about-me .details{
+  display: flex;  
+  flex-direction: column;
+  gap: 1.563rem;
+}
+
+section.about-me .details h1{
+  font-size: 2.618rem;
+  color: var(--blue);
+}
+
+section.about-me .details p{
+  margin-bottom: 1rem;
+}
+
+section.about-me .container > div img{
+  width: 100%;
+  max-width: 550px;
+}
+
+
+
+
+@media screen and (min-width: 320px) {
+  .container{
+    max-width: 421px;
+  }
+
+  section.banner .title {
+    padding-top: 50%;
+  }
+
+  section.intro-therapies .intro .title{
+    font-size: 1.3rem;
+  }
+
+  section.intro-therapies .container > div{
+    flex-wrap: wrap;
+  }
+
+  section.intro-therapies .intro{
+    width: 100%;
+  }
+
+  section.intro-therapies hr{
+    width: 100%;
+    height: 0px;
+    background-color: var(--blue);
+    margin: 0;
+    border-color: transparent;
+  }
+
+  section.about-me .container > div{
+    flex-wrap: wrap ;
+  }
+}
+
+@media screen and (min-width: 421px) {
+  .container{
+    max-width: 520px;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .container{
+    max-width: 576px;
+  }
+
+  section.banner .title {
+    padding-top: 35%;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container{
+    max-width: 768px;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .container{
+    max-width: 990px;
+  }
+
+  section.intro-therapies .container > div {
+    flex-wrap: nowrap;
+  } 
+
+  section.intro-therapies hr{
+    height: 100px;
+    border-color: var(--blue);
+    background-color: transparent;
+    width: 0;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  .container{
+    max-width: 1119px;
+  }
+
+  section.banner .title {
+    padding-top: 20%;
+  }
+
 }
