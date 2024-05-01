@@ -6,6 +6,10 @@
   --box-shadow: 0px 4px 10px 0px #dcdcdc;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 p{
   line-height: 150%;
 }
@@ -100,6 +104,7 @@ picture {
 
 .title-xl{
   font-size: 2.618rem;
+  font-weight: 600;
 }
 
 section.banner{
@@ -202,6 +207,8 @@ section.about-me .container{
   display: flex;
   gap: 4rem;
   align-items: center;
+
+  padding-bottom: 4rem;
 }
 
 section.about-me .details h1{
@@ -263,6 +270,10 @@ section.list-therapies .carousel{
   justify-content: center;
 }
 
+section.list-therapies .carousel > img{
+  cursor: pointer;
+}
+
 section.list-therapies .cards{
   display: flex;
   justify-content: center;
@@ -298,30 +309,106 @@ section.courses > img{
   border-radius: 200px 200px 0 0;
 }
 
+section.courses .list-courses {
+  padding-bottom: 3rem;
+}
+
 section.courses .list-courses .course{
   display: flex;
   gap: 2rem;
   align-items: center;
 
   background: rgba(225, 225, 225, 30%);
-  border-radius: 20px;
-}
-
-section.courses > img{
-  border-radius: 200px 200px 0 0;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
 }
 
 section.courses .list-courses .course img{
-  border-radius: 20px 0 20px 0;
+  border-radius: 10px 0 0 10px;
+}
+
+section.courses .list-courses .course.inverse img{
+  border-radius: 0 10px 10px 0;
 }
 
 section.courses .list-courses .course .details h1{
   font-size: 1.875rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 section.courses .list-courses .course .details{
   margin-right: 3rem;
+}
+
+section.courses .list-courses .course.inverse .details{
+  margin-left: 3rem;
+}
+
+section.courses .list-courses .course .button-dark{
+  margin-top: 3rem;
+}
+
+section.constellation-in-the-prison{
+  padding: 5rem 0;
+}
+
+section.constellation-in-the-prison > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+section.constellation-in-the-prison > div .details h1{
+  margin-bottom: 1rem;
+}
+
+section.constellation-in-the-prison > div .details .button-dark{
+  margin-top: 3rem;
+}
+
+section.constellation-in-the-prison .images{
+  display: flex;
+  gap: 1rem;
+}
+
+section.constellation-in-the-prison .images img{
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+/* media queries */
+@media screen and (max-width: 1135px) {
+  section.courses .list-courses .course .details h1{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1058px) {
+  #courseInverse{
+    flex-direction: column-reverse;
+  }
+
+  section.courses .list-courses .course{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section.courses .list-courses .course img,
+  section.courses .list-courses .course.inverse img{
+    border-radius: 10px;
+
+    max-width: 350px;
+    width: 100%;
+  }
+
+  section.courses .list-courses .course .details,
+  section.courses .list-courses .course.inverse .details{
+    text-align: center;
+    margin: 0 5rem 2rem 5rem;
+  }
+
+  
 }
 
 @media screen and (max-width: 421px) {
@@ -353,6 +440,26 @@ section.courses .list-courses .course .details{
     background: white;
     border-radius: 100%;
   }
+
+  section.courses .list-courses .course img, section.courses .list-courses .course.inverse img{
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+  }
+
+  section.courses > img {
+    border-radius: 50px 50px 0 0;
+  }
+}
+
+@media screen and (max-width: 520px){
+  section.courses .list-courses .course .details, 
+  section.courses .list-courses .course.inverse .details{
+    margin: 0 1rem 2rem 1rem!important;
+  }
+
+  section.courses > img{
+    border-radius: 100px 100px 0 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -373,6 +480,10 @@ section.courses .list-courses .course .details{
 @media screen and (max-width: 768px) {
   section.about-me .container .details{
     margin-top: 18rem;
+  }
+
+  section.courses .list-courses .course .details, section.courses .list-courses .course.inverse .details{
+    margin: 0 2rem 2rem 2rem;
   }
 }
 

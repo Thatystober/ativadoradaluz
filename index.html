@@ -10,8 +10,6 @@
     <link rel="preload" href="./assets/fonts/Roboto-Bold.ttf" as="font" crossorigin>
     <link rel="preload" href="./assets/fonts/Bellefair-Regular.ttf" as="font" crossorigin>
 
-    <!-- <link rel="preload" href="/dist/main.css" as="style">
-    <link rel="preload" href="/dist/main.js" as="script"> -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -23,11 +21,11 @@
     <div id="wrapper">
       <header>
         <div class="container navbar">
-          <img src="./assets/images/logo.svg" width="100px" alt="">
+          <img src="./assets/images/logo.svg" role="presentation" width="100px" alt="">
           <ul>
-            <li><a href="">QUEM SOU</a></li>
-            <li><a href="">TERAPIAS</a></li>
-            <li><a href="">CURSOS</a></li>
+            <li><a href="#aboutMe">QUEM SOU</a></li>
+            <li><a href="#listTherapies">TERAPIAS</a></li>
+            <li><a href="#courses">CURSOS</a></li>
           </ul>
         </div>
       </header>
@@ -38,7 +36,7 @@
             <source srcset="./assets/images/banner-mobile.jpg" media="(max-width: 768px)" sizes="768px" type="image/jpg">
             <source srcset="./assets/images/banner.jpg" type="image/jpg" media="(min-width: 768px)" width="1443" height="410" >
 
-            <img src="./assets/images/banner.jpg" width="1443" height="410" role="presentation" alt="">
+            <img src="./assets/images/banner.jpg"  width="1443" height="410" role="presentation" alt="">
           </picture>
           <div class="container">
             <div class="title">
@@ -51,7 +49,7 @@
             <div>
               <div class="intro therapies">
                 <div class="title">
-                  <img src="./assets/images/icon-therapies.svg" alt="">
+                  <img src="./assets/images/icon-therapies.svg" role="presentation" alt="">
                   <h1>Terapias</h1>
                 </div>
                 <p>Descubra o poder da cura natural e do equilíbrio interior.</p>
@@ -59,7 +57,7 @@
               <hr>
               <div class="intro experiences">
                 <div class="title">
-                  <img src="./assets/images/icon-experiences.svg" alt="">
+                  <img src="./assets/images/icon-experiences.svg" role="presentation" alt="">
                   <h1>Vivências</h1>
                 </div>
                 <p>Explore experiências transformadoras que integram corpo, mente e espírito com nossas vivências.</p>
@@ -67,7 +65,7 @@
               <hr>
               <div class="intro rituals">
                 <div class="title">
-                  <img src="./assets/images/icon-rituals.svg" alt="">
+                  <img src="./assets/images/icon-rituals.svg" role="presentation" alt="">
                   <h1>Rituais</h1>
                 </div>
                 <p>Desperte a conexão com o sagrado e promova a harmonia interior.</p>
@@ -75,7 +73,7 @@
             </div>
           </div>
         </section>
-        <section class="about-me">
+        <section class="about-me" id="aboutMe">
           <img src="./assets/images/background-about.jpg" class="background-about" role="presentation" alt="">
           <div class="container">
               <div class="details">
@@ -105,10 +103,15 @@
                     Minha essência é a espontaneidade, uma característica que se reflete em tudo o que faço e em como me relaciono com o mundo ao meu redor.
                   </p>
               </div>
-              <img src="./assets/images/fernanda.png" width="550" alt="">
+              <picture>
+                <source srcset="./assets/images/fernanda.avif" type="image/avif">
+                <source srcset="./assets/images/fernanda.webp" type="image/webp">
+                <source srcset="./assets/images/fernanda.png" type="image/png">
+                <img src="./assets/images/fernanda.png" width="550" role="presentation" alt="">
+              </picture>
           </div>
         </section>
-        <section class="list-therapies">
+        <section class="list-therapies" id="listTherapies">
           <div class="container" id="carouselTherapies">
             <h1 class="title-xl">Terapias</h1>
             
@@ -117,28 +120,48 @@
               <div class="cards">
                 <div class="card">
                   <h1>Constelação Familiar</h1>
-                  <img src="./assets/images/family-constellation.png" alt="Imagem Constelação Familiar">
+                  <picture>
+                    <source srcset="./assets/images/family-constellation.avif" type="image/avif">
+                    <source srcset="./assets/images/family-constellation.webp" type="image/webp">
+                    <source srcset="./assets/images/family-constellation.png" type="image/png">
+                    <img src="./assets/images/family-constellation.png" role="presentation" alt="Imagem Constelação Familiar">
+                  </picture>
                   <div class="button-default">
                     <a href="">Ver mais</a>
                   </div>
                 </div>
                 <div class="card">
                   <h1>Reiki</h1>
-                  <img src="./assets/images/reiki.png" alt="Imagem Reiki">
+                  <picture>
+                    <source srcset="./assets/images/reiki.avif" type="image/avif">
+                    <source srcset="./assets/images/reiki.webp" type="image/webp">
+                    <source srcset="./assets/images/reiki.png" type="image/png">
+                    <img src="./assets/images/reiki.png" role="presentation" alt="Imagem Reiki">
+                  </picture>
                   <div class="button-default">
                     <a href="">Ver mais</a>
                   </div>
                 </div>
                 <div class="card">
                   <h1>Apometria</h1>
-                  <img src="./assets/images/apometry.png" alt="Imagem Apometria">
+                  <picture>
+                    <source srcset="./assets/images/apometry.avif" type="image/avif">
+                    <source srcset="./assets/images/apometry.webp" type="image/webp">
+                    <source srcset="./assets/images/apometry.png" type="image/png">
+                    <img src="./assets/images/apometry.png" role="presentation" alt="Imagem Apometria">
+                  </picture>
                   <div class="button-default">
                     <a href="">Ver mais</a>
                   </div>
                 </div>
                 <div class="card">
                   <h1>Apometria</h1>
-                  <img src="./assets/images/apometry.png" alt="Imagem Apometria">
+                  <picture>
+                    <source srcset="./assets/images/apometry.avif" type="image/avif">
+                    <source srcset="./assets/images/apometry.webp" type="image/webp">
+                    <source srcset="./assets/images/apometry.png" type="image/png">
+                    <img src="./assets/images/apometry.png" role="presentation" alt="Imagem Apometria">
+                  </picture>
                   <div class="button-default">
                     <a href="">Ver mais</a>
                   </div>
@@ -157,14 +180,24 @@
               <div class="cards">
                 <div class="card">
                   <h1>Renascimento</h1>
-                  <img src="./assets/images/renascence.png" alt="Imagem Renascimento">
+                  <picture>
+                    <source srcset="./assets/images/renascence.avif" type="image/avif">
+                    <source srcset="./assets/images/renascence.webp" type="image/webp">
+                    <source srcset="./assets/images/renascence.png" type="image/png">
+                    <img src="./assets/images/renascence.png" role="presentation" alt="Imagem Renascimento">
+                  </picture>
                   <div class="button-default">
                     <a href="">Ver mais</a>
                   </div>
                 </div>
                 <div class="card">
                   <h1>Sagrado Feminino</h1>
-                  <img src="./assets/images/sacred-feminine.png" alt="Imagem Reiki">
+                  <picture>
+                    <source srcset="./assets/images/sacred-feminine.avif" type="image/avif">
+                    <source srcset="./assets/images/sacred-feminine.webp" type="image/webp">
+                    <source srcset="./assets/images/sacred-feminine.png" type="image/png">
+                    <img src="./assets/images/sacred-feminine.png" role="presentation" alt="Imagem Sagrado Feminino">
+                  </picture>
                   <div class="button-default">
                     <a href="">Ver mais</a>
                   </div>
@@ -183,21 +216,36 @@
               <div class="cards">
                 <div class="card">
                   <h1>Ayahuasca</h1>
-                  <img src="./assets/images/ayahuasca.png" alt="Imagem Ayahuasca">
+                  <picture>
+                    <source srcset="./assets/images/ayahuasca.avif" type="image/avif">
+                    <source srcset="../assets/images/ayahuasca.webp" type="image/webp">
+                    <source srcset="./assets/images/ayahuasca.png" type="image/png">
+                    <img src="./assets/images/ayahuasca.png" role="presentation" alt="Imagem Ayahuasca">
+                  </picture>
                   <div class="button-default">
                     <a href="">Ver mais</a>
                   </div>
                 </div>
                 <div class="card">
                   <h1>Rapé</h1>
-                  <img src="./assets/images/snuff.png" alt="Imagem Rapé">
+                  <picture>
+                    <source srcset="./assets/images/snuff.avif" type="image/avif">
+                    <source srcset="../assets/images/snuff.webp" type="image/webp">
+                    <source srcset="./assets/images/snuff.png" type="image/png">
+                    <img src="./assets/images/snuff.png" role="presentation" alt="Imagem Rapé">
+                  </picture>
                   <div class="button-default">
                     <a href="">Ver mais</a>
                   </div>
                 </div>
                 <div class="card">
                   <h1>Cacau</h1>
-                  <img src="./assets/images/cacau.png" alt="Imagem Cacau">
+                  <picture>
+                    <source srcset="./assets/images/cacau.avif" type="image/avif">
+                    <source srcset="./assets/images/cacau.webp" type="image/webp">
+                    <source srcset="./assets/images/cacau.png" type="image/png">
+                    <img src="./assets/images/cacau.png" role="presentation" alt="Imagem Cacau">
+                  </picture>
                   <div class="button-default">
                     <a href="">Ver mais</a>
                   </div>
@@ -207,14 +255,20 @@
             </div>
           </div>
         </section>
-        <section class="courses">
+        <section class="courses" id="courses">
           <img src="./assets/images/background-courses.jpg" class="background-courses" role="presentation" alt="">
           <div class="container">
             <h1 class="title-xl">Cursos</h1>
 
             <div class="list-courses">
               <div class="course">
-                <img src="./assets/images/course-reiki.png"  width="500" role="presentation" alt="">
+                <picture>
+                  <source srcset="./assets/images/course-reiki.avif" type="image/avif">
+                  <source srcset="./assets/images/course-reiki.webp" type="image/webp">
+                  <source srcset="./assets/images/course-reiki.png" type="image/png">
+                  <img src="./assets/images/course-reiki.png" width="500" role="presentation" alt="">
+                </picture>
+                
                 <div class="details">
                   <h1>Reiki Usui, Xamânico e estelar</h1>
                   <p>O curso de Reiki Usui, Xamânico e Estelar é uma imersão profunda em práticas ancestrais e espirituais que visam o equilíbrio e a cura em todos os níveis do ser. Integrando a sabedoria do Reiki Usui, com suas técnicas de canalização de energia vital, ao xamanismo, que proporciona conexão com a natureza e os espíritos, e ao Reiki Estelar, que expande a consciência cósmica, essa jornada oferece aos praticantes uma poderosa ferramenta para o autoconhecimento, a transformação pessoal e a conexão com o divino.</p>
@@ -223,6 +277,93 @@
                   </div>
                 </div>
               </div>
+              <div class="course inverse" id="courseInverse">
+                <div class="details">
+                  <h1>Apometria</h1>
+                  <p>O curso de Apometria é uma oportunidade única para explorar os mistérios do mundo espiritual e aprofundar o entendimento sobre a alma humana. Baseado em princípios da espiritualidade e da física quântica, a Apometria é uma técnica terapêutica que visa harmonizar e equilibrar os corpos sutis, promovendo a cura em níveis profundos do ser. Neste curso, os participantes serão guiados através de teoria e prática, aprendendo a trabalhar com energias sutis, desbloquear traumas do passado e auxiliar na evolução espiritual, proporcionando uma jornada de autodescoberta e crescimento espiritual.</p>
+                  <div class="button-dark">
+                    <a href="">Saiba mais</a>
+                  </div>
+                </div>
+                <picture>
+                  <source srcset="./assets/images/course-apometry.avif" type="image/avif">
+                  <source srcset="./assets/images/course-apometry.webp" type="image/webp">
+                  <source srcset="./assets/images/course-apometry.png" type="image/png">
+                  <img src="./assets/images/course-apometry.png" width="500" role="presentation" alt="">
+                </picture>
+              </div>
+              <div class="course">
+                <picture>
+                  <source srcset="./assets/images/course-barras-access.avif" type="image/avif">
+                  <source srcset="./assets/images/course-barras-access.webp" type="image/webp">
+                  <source srcset="./assets/images/course-barras-access.png" type="image/png">
+                  <img src="./assets/images/course-barras-access.png" width="500" role="presentation" alt="">
+                </picture>
+                
+                <div class="details">
+                  <h1>Barras de Access</h1>
+                  <p>O curso de Barras de Access é uma oportunidade revolucionária de mergulhar em técnicas de expansão da consciência e liberação de bloqueios energéticos. Fundamentado na ideia de que cada pensamento, sentimento e emoção cria uma forma de onda eletromagnética ao redor do corpo, a técnica da Barras de Access consiste na suave manipulação de pontos específicos na cabeça para dissipar esses padrões limitantes, permitindo o acesso a um estado de maior clareza mental, paz interior e bem-estar. Neste curso, os participantes serão capacitados a aplicar essa técnica poderosa, proporcionando não apenas benefícios físicos e emocionais, mas também um caminho para a expansão da consciência e o despertar espiritual.</p>
+                  <div class="button-dark">
+                    <a href="">Saiba mais</a>
+                  </div>
+                </div>
+              </div>
+              <div class="course inverse" id="courseInverse">
+                <div class="details">
+                  <h1>Constelação familiar</h1>
+                  <p>O curso de Constelação Familiar oferece uma jornada profunda de exploração das dinâmicas familiares e sua influência em nossa vida. Baseado nos princípios desenvolvidos por Bert Hellinger, este curso proporciona ferramentas para compreender e transformar padrões repetitivos, conflitos e bloqueios que podem estar enraizados no sistema familiar. Ao explorar as relações entre membros da família e identificar questões não resolvidas, os participantes aprendem a facilitar constelações sistêmicas que trazem à luz as dinâmicas ocultas, promovendo a cura, o entendimento e a harmonia nos relacionamentos familiares e pessoais.</p>
+                  <div class="button-dark">
+                    <a href="">Saiba mais</a>
+                  </div>
+                </div>
+                <picture>
+                  <source srcset="./assets/images/course-family-constellation.avif" type="image/avif">
+                  <source srcset="./assets/images/course-family-constellation.webp" type="image/webp">
+                  <source srcset="./assets/images/course-family-constellation.png" type="image/png">
+                  <img src="./assets/images/course-family-constellation.png" width="500" role="presentation" alt="">
+                </picture>
+              </div>
+              <div class="course">
+                <picture>
+                  <source srcset="./assets/images/course-tantric-massage.avif" type="image/avif">
+                  <source srcset="./assets/images/course-tantric-massage.webp" type="image/webp">
+                  <source srcset="./assets/images/ccourse-tantric-massage.png" type="image/png">
+                  <img src="./assets/images/course-tantric-massage.png" width="500" role="presentation" alt="">
+                </picture>
+                
+                <div class="details">
+                  <h1>Massagem Tântrica</h1>
+                  <p>O curso de Massagem Tântrica oferece uma oportunidade única de explorar a conexão entre corpo, mente e espírito, através de técnicas terapêuticas que visam expandir a energia sexual e promover o despertar da consciência sensorial. Fundamentado nos ensinamentos milenares do tantra, este curso convida os participantes a explorar a intimidade consigo mesmos e com os outros, através de práticas que envolvem toque consciente, respiração e meditação. Ao longo dessa jornada, os alunos aprendem a liberar bloqueios emocionais e traumas armazenados no corpo, permitindo uma experiência de cura profunda, expansão da energia vital e um maior entendimento da sexualidade como uma fonte de conexão, amor e transcendência.</p>
+                  <div class="button-dark">
+                    <a href="">Saiba mais</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="constellation-in-the-prison container">
+          <div>
+            <div class="details">
+              <h1 class="title-xl">Constelação no presídio</h1>
+              <p>O Projeto, iniciado com 10 privados de liberdade e com periodicidade mensal, visa melhorar o nível de convivência entre detentos e promover o aperfeiçoamento interno ético e moral de cada um.</p>
+              <div class="button-dark">
+                <a href="">Saiba mais</a>
+              </div>
+            </div>
+            <div class="images">
+              <picture>
+                <source srcset="./assets/images/constellation-in-the-prision-one.avif" type="image/avif">
+                <source srcset="./assets/images/constellation-in-the-prision-one.webp" type="image/webp">
+                <source srcset="./assets/images/constellation-in-the-prision-one.png" type="image/png">
+                <img src="./assets/images/constellation-in-the-prison-one.png" role="presentation" alt="">
+              </picture>
+              <picture>
+                <source srcset="./assets/images/constellation-in-the-prison-two.avif" type="image/avif">
+                <source srcset="./assets/images/constellation-in-the-prison-two.webp" type="image/webp">
+                <source srcset="./assets/images/constellation-in-the-prison-two.png" type="image/png">
+                <img src="./assets/images/constellation-in-the-prison-two.png" role="presentation" alt="">
+              </picture>
             </div>
           </div>
         </section>
