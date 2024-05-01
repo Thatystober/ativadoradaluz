@@ -10,7 +10,8 @@ p{
   line-height: 150%;
 }
 
-.button-default{
+.button-default,
+.button-dark{
   margin-top: 1rem;
 }
 
@@ -18,6 +19,14 @@ p{
   padding: .5rem 2rem;
   text-decoration: none;
   background: var(--blue);
+  border-radius: 20px;
+  color: var(--white);
+}
+
+.button-dark a{
+  padding: .5rem 2rem;
+  text-decoration: none;
+  background: var(--text);
   border-radius: 20px;
   color: var(--white);
 }
@@ -31,12 +40,14 @@ p{
 	padding-left: 2rem;
   
 	position: relative;
-	width: 100%;	
+	/* width: 100%;	 */
+  width: auto;
 }
 
 #wrapper {
   height: 100%;
 	width: 100%;
+  min-height: 100vh;
 	display: flex;
 	flex-direction: column;
   
@@ -47,6 +58,10 @@ header{
   padding: .5rem 0;
 	color: var(--white);
   display: flex;
+}
+
+header .container{
+  width: 100%;
 }
 
 header .navbar{
@@ -120,10 +135,6 @@ section.banner .title{
   display: flex;
   align-items: center;
   padding-top: 20%;
-}
-
-section.banner .container{
-  width: auto;
 }
 
 section.intro-therapies{
@@ -207,37 +218,172 @@ section.about-me .container img{
   max-width: 500px;
 }
 
-section.list-therapies h1.title-xl{
+section.list-therapies h1.title-xl,
+section.courses h1.title-xl{
   font-weight: bold;
   text-align: center;
+
+  margin-bottom: 4rem;
+}
+
+section.courses h1.title-xl{
+  padding-top: 5rem;
 }
 
 section.list-therapies{
-  margin: 5rem 0;
+  padding: 5rem 0;
+}
+
+section.list-therapies.experiences{  
+  background: #fafafa;
 }
 
 section.list-therapies .card h1{
   letter-spacing: 2px;
-  font-size: 1.618rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center;
+
+  width: 280px;
 }
 
 section.list-therapies .card{
-  max-width: 300px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  transition: transform 0.5s ease;
+}
+
+section.list-therapies .carousel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 section.list-therapies .cards{
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
-  gap: 1rem;
+  width: 900px;
+  height: 300px;
+  overflow: hidden;
 }
+
+section.list-therapies .card.hidden{
+  display: none;
+}
+
+section.list-therapies .prev.hidden,
+section.list-therapies .next.hidden{
+  visibility: hidden;
+  opacity: 0;
+}
+
+
+section.courses{
+  position: relative;
+}
+
+section.courses img.background-courses{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+section.courses > img{
+  border-radius: 200px 200px 0 0;
+}
+
+section.courses .list-courses .course{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  background: rgba(225, 225, 225, 30%);
+  border-radius: 20px;
+}
+
+section.courses > img{
+  border-radius: 200px 200px 0 0;
+}
+
+section.courses .list-courses .course img{
+  border-radius: 20px 0 20px 0;
+}
+
+section.courses .list-courses .course .details h1{
+  font-size: 1.875rem;
+  margin-bottom: 3rem;
+}
+
+section.courses .list-courses .course .details{
+  margin-right: 3rem;
+}
+
+@media screen and (max-width: 421px) {
+  .carousel {
+    position: relative;
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev {
+    left: 0;
+    margin-left: 1.5rem;
+  }
+
+  .next {
+    right: 0;
+    margin-right: 1.5rem;
+  }
+
+  .prev,
+  .next{
+    background: white;
+    border-radius: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  section.intro-therapies .intro p,
+  section.about-me .container .details p{
+    font-size: .875rem;
+  }
+  
+  section.intro-therapies .intro .title{
+    font-size: 1rem;
+  }
+  
+  section.intro-therapies .container > div{
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.about-me .container .details{
+    margin-top: 18rem;
+  }
+}
+
+@media screen and (max-width: 1150px){
+  section.about-me .container{
+    flex-wrap: wrap ;
+    justify-content: center;
+  }
+}
+
+
 
 @media screen and (min-width: 320px) {
   .container{
@@ -269,29 +415,6 @@ section.list-therapies .cards{
   }
 }
 
-@media screen and (max-width: 576px) {
-  section.intro-therapies .intro p,
-  section.about-me .container .details p{
-    font-size: .875rem;
-  }
-
-  section.intro-therapies .intro .title{
-    font-size: 1rem;
-  }
-
-  section.intro-therapies .container > div{
-    padding: 2rem;
-  }
-
-  
-}
-
-@media screen and (max-width: 768px) {
-  section.about-me .container .details{
-    margin-top: 18rem;
-  }
-}
-
 @media screen and (min-width: 421px) {
   .container{
     max-width: 520px;
@@ -313,7 +436,6 @@ section.list-therapies .cards{
     max-width: 768px;
   }
 }
-
 
 @media screen and (min-width: 768px) {
   .container{
@@ -340,20 +462,12 @@ section.list-therapies .cards{
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) {  
   .container{
     max-width: 1119px;
   }
 
   section.banner .title {
     padding-top: 20%;
-  }
-}
-
-@media screen and (max-width: 1150px){
-  section.about-me .container{
-    flex-wrap: wrap ;
-    width: auto;
-    justify-content: center;
   }
 }

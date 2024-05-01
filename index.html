@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" media="screen" />
 
     <link rel="preload" href="./assets/fonts/Roboto-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="./assets/fonts/Roboto-Medium.ttf" as="font" crossorigin>
@@ -109,44 +109,125 @@
           </div>
         </section>
         <section class="list-therapies">
-          <div class="container">
+          <div class="container" id="carouselTherapies">
             <h1 class="title-xl">Terapias</h1>
-  
-            <div class="cards">
-              <img src="./assets/images/icon-back.svg" alt="">
-              <div class="card">
-                <h1>Constelação Familiar</h1>
-                <img src="./assets/images/family-constellation.png" alt="Imagem Constelação Familiar">
-                <div class="button-default">
-                  <a href="">Ver mais</a>
+            
+            <div class="carousel">
+              <img src="./assets/images/icon-back.svg" loading="lazy" width="50" height="50" class="prev" alt="Visualizar a imagem anterior">
+              <div class="cards">
+                <div class="card">
+                  <h1>Constelação Familiar</h1>
+                  <img src="./assets/images/family-constellation.png" alt="Imagem Constelação Familiar">
+                  <div class="button-default">
+                    <a href="">Ver mais</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <h1>Reiki</h1>
+                  <img src="./assets/images/reiki.png" alt="Imagem Reiki">
+                  <div class="button-default">
+                    <a href="">Ver mais</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <h1>Apometria</h1>
+                  <img src="./assets/images/apometry.png" alt="Imagem Apometria">
+                  <div class="button-default">
+                    <a href="">Ver mais</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <h1>Apometria</h1>
+                  <img src="./assets/images/apometry.png" alt="Imagem Apometria">
+                  <div class="button-default">
+                    <a href="">Ver mais</a>
+                  </div>
                 </div>
               </div>
-              <div class="card">
-                <h1>Reiki</h1>
-                <img src="./assets/images/reiki.png" alt="Imagem Reiki">
-                <div class="button-default">
-                  <a href="">Ver mais</a>
+              <img src="./assets/images/icon-next.svg" loading="lazy" width="50" height="50" class="next" alt="Visualizar a próxima imagem">
+            </div>
+          </div>
+        </section>
+        <section class="list-therapies experiences">
+          <div class="container">
+            <h1 class="title-xl">Vivências</h1>
+            
+            <div class="carousel" id="carouselExperiences">
+              <img src="./assets/images/icon-back.svg" loading="lazy" width="50" height="50" class="prev" alt="Visualizar a imagem anterior">
+              <div class="cards">
+                <div class="card">
+                  <h1>Renascimento</h1>
+                  <img src="./assets/images/renascence.png" alt="Imagem Renascimento">
+                  <div class="button-default">
+                    <a href="">Ver mais</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <h1>Sagrado Feminino</h1>
+                  <img src="./assets/images/sacred-feminine.png" alt="Imagem Reiki">
+                  <div class="button-default">
+                    <a href="">Ver mais</a>
+                  </div>
                 </div>
               </div>
-              <div class="card">
-                <h1>Apometria</h1>
-                <img src="./assets/images/apometry.png" alt="Imagem Apometria">
-                <div class="button-default">
-                  <a href="">Ver mais</a>
+              <img src="./assets/images/icon-next.svg" loading="lazy" width="50" height="50" class="next" alt="Visualizar a próxima imagem">
+            </div>
+          </div>
+        </section>
+        <section class="list-therapies">
+          <div class="container">
+            <h1 class="title-xl">Rituais</h1>
+            
+            <div class="carousel" id="carouselRituals">
+              <img src="./assets/images/icon-back.svg" loading="lazy" width="50" height="50" class="prev" alt="Visualizar a imagem anterior">
+              <div class="cards">
+                <div class="card">
+                  <h1>Ayahuasca</h1>
+                  <img src="./assets/images/ayahuasca.png" alt="Imagem Ayahuasca">
+                  <div class="button-default">
+                    <a href="">Ver mais</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <h1>Rapé</h1>
+                  <img src="./assets/images/snuff.png" alt="Imagem Rapé">
+                  <div class="button-default">
+                    <a href="">Ver mais</a>
+                  </div>
+                </div>
+                <div class="card">
+                  <h1>Cacau</h1>
+                  <img src="./assets/images/cacau.png" alt="Imagem Cacau">
+                  <div class="button-default">
+                    <a href="">Ver mais</a>
+                  </div>
                 </div>
               </div>
-              <div class="card">
-                <h1>Apometria</h1>
-                <img src="./assets/images/apometry.png" alt="Imagem Apometria">
-                <div class="button-default">
-                  <a href="">Ver mais</a>
+              <img src="./assets/images/icon-next.svg" loading="lazy" width="50" height="50" class="next" alt="Visualizar a próxima imagem">
+            </div>
+          </div>
+        </section>
+        <section class="courses">
+          <img src="./assets/images/background-courses.jpg" class="background-courses" role="presentation" alt="">
+          <div class="container">
+            <h1 class="title-xl">Cursos</h1>
+
+            <div class="list-courses">
+              <div class="course">
+                <img src="./assets/images/course-reiki.png"  width="500" role="presentation" alt="">
+                <div class="details">
+                  <h1>Reiki Usui, Xamânico e estelar</h1>
+                  <p>O curso de Reiki Usui, Xamânico e Estelar é uma imersão profunda em práticas ancestrais e espirituais que visam o equilíbrio e a cura em todos os níveis do ser. Integrando a sabedoria do Reiki Usui, com suas técnicas de canalização de energia vital, ao xamanismo, que proporciona conexão com a natureza e os espíritos, e ao Reiki Estelar, que expande a consciência cósmica, essa jornada oferece aos praticantes uma poderosa ferramenta para o autoconhecimento, a transformação pessoal e a conexão com o divino.</p>
+                  <div class="button-dark">
+                    <a href="">Saiba mais</a>
+                  </div>
                 </div>
               </div>
-              <img src="./assets/images/icon-next.svg" alt="">
             </div>
           </div>
         </section>
       </div>  
     </div>
+    <script src="./scripts/index.js"></script>
   </body> 
 </html>
