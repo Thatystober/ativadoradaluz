@@ -293,7 +293,9 @@ section.list-therapies .card.hidden{
 }
 
 section.list-therapies .prev.hidden,
-section.list-therapies .next.hidden{
+section.list-therapies .next.hidden,
+#page section.photos .carousel .prev.hidden,
+#page section.photos .carousel .next.hidden{
   visibility: hidden;
   opacity: 0;
 }
@@ -391,6 +393,7 @@ footer > div{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 footer .social-media{
@@ -478,6 +481,71 @@ footer .social-media > div a{
   text-align: center;
 }
 
+#page section.photos{
+  padding: 3rem 0px;
+}
+
+#page section.photos .carousel{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#page section.photos .carousel .slides{
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+#page section.photos .carousel .slides img{
+  width: calc(100% / 3); 
+  flex-shrink: 0;
+} 
+
+#page section.photos .carousel .prev,
+#page section.photos .carousel .next{
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+#page section.photos .carousel .prev {
+  left: 10px;
+}
+
+#page section.photos .carousel .next{
+  right: 10px;
+}
+
+#page .button-whats{
+  background: #009E00;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+
+  border-radius: 10px;
+  padding: .4rem;
+  margin: 0 auto 2rem auto;
+}
+
+#page .button-whats a{
+  text-decoration: none;
+  color: #fff;
+  padding: .5rem;
+  border-radius: 10px;
+}
+
 /* media queries */
 @media screen and (max-width: 1135px) {
   section.courses .list-courses .course .details h1{
@@ -554,6 +622,10 @@ footer .social-media > div a{
   section.constellation-in-the-prison > div .images img{
     width: 100%;
   }
+
+  #page section.intro .details h1{
+    font-size: 2rem!important;
+  }
 }
 
 @media screen and (max-width: 520px){
@@ -564,6 +636,15 @@ footer .social-media > div a{
 
   section.courses > img{
     border-radius: 100px 100px 0 0;
+  }
+
+  footer .social-media{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #page section.intro .details h1{
+    letter-spacing: 6px;
   }
 }
 
@@ -579,6 +660,18 @@ footer .social-media > div a{
   
   section.intro-therapies .container > div{
     padding: 2rem;
+  }
+
+  #page section.intro .details{
+    width: 100%;
+  }
+
+  #page section.intro .details h1{
+    font-size: 3rem;
+  }
+
+  #page section.intro .details p{
+    font-size: 1rem;
   }
 }
 
@@ -596,6 +689,14 @@ footer .social-media > div a{
 
   section.courses .list-courses .course .details, section.courses .list-courses .course.inverse .details{
     margin: 0 2rem 2rem 2rem;
+  }
+
+  footer > div{
+    flex-direction: column-reverse;
+  }
+
+  footer .social-media{
+    font-size: .75rem;
   }
 }
 
