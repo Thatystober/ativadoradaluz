@@ -1,91 +1,63 @@
-if(document.querySelector("#home")){
-  
-  const carousels = document.querySelectorAll(".carousel");
-  
-  carousels.forEach(carousel => {
-    const prevButton = carousel.querySelector(".prev");
-    const nextButton = carousel.querySelector(".next");
-    // const cardsContainer = carousel.querySelector(".cards");
-    const cards = carousel.querySelectorAll(".card");
-    // const cardWidth = cards[0].offsetWidth;
+function initializeCarousel(containerSelector, itemSelector) {
+  const containers = document.querySelectorAll(containerSelector);
+
+  containers.forEach(container => {
+    const items = container.querySelectorAll(itemSelector);
+    const prevButton = container.querySelector('.prev');
+    const nextButton = container.querySelector('.next');
     let currentIndex = 0;
-    let visibleCards = 3;
-  
+    let visibleItems = 3;
+
     function updateVisibility() {
       prevButton.classList.toggle('hidden', currentIndex === 0);
-      nextButton.classList.toggle('hidden', currentIndex >= cards.length - visibleCards);
+      nextButton.classList.toggle('hidden', currentIndex >= items.length - visibleItems);
     }
-  
-    function showNextCard() {
-      if (currentIndex < cards.length - visibleCards) {
+
+    function showNextItem() {
+      if (currentIndex < items.length - visibleItems) {
         currentIndex++;
-        updateCardsVisibility();
+        updateItemsVisibility();
       }
     }
-  
-    function showPrevCard() {
+
+    function showPrevItem() {
       if (currentIndex > 0) {
         currentIndex--;
-        updateCardsVisibility();
+        updateItemsVisibility();
       }
     }
-  
-    function updateCardsVisibility() {
-      cards.forEach((card, index) => {
-        card.classList.toggle('hidden', index < currentIndex || index >= currentIndex + visibleCards);
+
+    function updateItemsVisibility() {
+      items.forEach((item, index) => {
+        item.classList.toggle('hidden', index < currentIndex || index >= currentIndex + visibleItems);
       });
       updateVisibility();
     }
-  
-    prevButton.addEventListener("click", showPrevCard);
-    nextButton.addEventListener("click", showNextCard);
-  
-    function updateVisibleCards() {
+
+    prevButton.addEventListener("click", showPrevItem);
+    nextButton.addEventListener("click", showNextItem);
+
+    function updateVisibleItems() {
       if (window.innerWidth <= 768) {
-        visibleCards = 1;
+        visibleItems = 1;
       } else if (window.innerWidth <= 992) {
-        visibleCards = 2;
+        visibleItems = 2;
       } else {
-        visibleCards = 3;
+        visibleItems = 3;
       }
-      updateCardsVisibility();
+      updateItemsVisibility();
     }
-  
-    updateVisibleCards(); // Atualiza os cards visíveis inicialmente
-  
-    window.addEventListener('resize', updateVisibleCards);
+
+    updateVisibleItems();
+
+    window.addEventListener('resize', updateVisibleItems);
   });
 }
 
-if(document.querySelector(".photos")){
-  const slides = document.querySelector('.slides');
-  const prevButton = document.querySelector('.prev');
-  const nextButton = document.querySelector('.next');
-  const totalSlides = document.querySelectorAll('.slides img').length;
-  
-  let currentIndex = 0;
-  
-  function updateCarousel() {
-    const offset = -currentIndex * (100 / 3); // Ajuste para três imagens visíveis
-    slides.style.transform = `translateX(${offset}%)`;
-  }
-  
-  prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 3;
-    if (currentIndex < 0) {
-      currentIndex = 0;
-    }
-    updateCarousel();
-  });
-  
-  nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex < totalSlides - 3) ? currentIndex + 1 : 0;
-    updateCarousel();
-  });
-  
-  // Optional: Auto slide every 3 seconds
-  // setInterval(() => {
-  //   currentIndex = (currentIndex < totalSlides - 3) ? currentIndex + 1 : 0;
-  //   updateCarousel();
-  // }, 3000);
+if (document.querySelector(".photos")) {
+  initializeCarousel('.photos', '.slides img');
+}
+
+if (document.querySelector("#home")) {
+  initializeCarousel('.carousel', '.card');
 }

@@ -498,14 +498,25 @@ footer .social-media > div a{
 }
 
 #page section.photos .carousel .slides{
+  /* display: flex;
+  transition: transform 0.5s ease-in-out; */
+
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  justify-content: center;
+  width: 900px;
+  overflow: hidden;
+
 }
 
 #page section.photos .carousel .slides img{
-  width: calc(100% / 3); 
-  flex-shrink: 0;
+  /* width: calc(100% / 3); 
+  flex-shrink: 0; */
+  transition: transform 0.5s ease;
 } 
+
+#page section.photos .carousel .slides img.hidden{
+  display: none;
+}
 
 #page section.photos .carousel .prev,
 #page section.photos .carousel .next{
