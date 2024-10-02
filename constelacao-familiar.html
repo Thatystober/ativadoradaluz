@@ -71,7 +71,7 @@
           <div class="carousel">
             <img src="./assets/images/icon-back.svg" loading="lazy" width="50" height="50" class="prev" alt="Visualizar a imagem anterior">
             <div class="slides">
-              <img src="/assets/images/marcacao.png" alt="">
+              <img src="/assets/images/marcacao.png" alt="" onclick="openModal('#viewPhoto', './assets/images/marcacao.png')">
               <img src="/assets/images/marcacao.png" alt="">
               <img src="/assets/images/marcacao.png" alt="">
               <img src="/assets/images/marcacao.png" alt="">
@@ -110,6 +110,18 @@
         </div>
       </footer>
     </div>
+
+    <div id="viewPhoto" class="modal">
+      <div class="modal-content">
+        <div class="button-close">
+          <span class="close">&times;</span>
+        </div>
+        <div class="content-modal">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+
     <script src="./scripts/index.js"></script>
   </body> 
 </html>

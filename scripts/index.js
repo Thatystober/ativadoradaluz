@@ -61,3 +61,15 @@ if (document.querySelector(".photos")) {
 if (document.querySelector("#home")) {
   initializeCarousel('.carousel', '.card');
 }
+
+function openModal(selector, img){
+  const modal = document.querySelector(selector);
+  modal.classList.add('show');
+  const modalImg = modal.querySelector('img');
+  modalImg.src = img;
+}
+
+function closeModal(selector){
+  const modal = document.querySelector(selector);
+  modal.classList.remove('show');
+}
